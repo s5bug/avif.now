@@ -39,5 +39,7 @@ jobs:
         uses: cloudflare/wrangler-action@v4
         with:
           packageManager: pnpm
+          preCommands: pnpm run build
+          command: deploy dist/server/entry.mjs
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
