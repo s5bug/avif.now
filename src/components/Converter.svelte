@@ -527,9 +527,10 @@ let formattedRemaining = $derived.by(() => {
   <h4>or</h4>
 </div>
 
-<div>
-  <label for="tenor-url">Tenor URL:</label>
+<div style="display: flex;">
+  <label for="tenor-url">Tenor URL:{' '}</label>
   <input
+    style="flex: 1;"
     id="tenor-url"
     type="text"
     pattern="https:\/\/tenor\.com\/view\/.*"

@@ -1,5 +1,5 @@
 {
-  "name": "avif-now",
+  "name": "avifnow",
   "type": "module",
   "version": "0.0.1",
   "engines": {
@@ -7,7 +7,7 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro sync && biome check && svelte-check && astro check && astro build",
+    "build": "astro sync && wrangler types && biome check && svelte-check && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "fmt": "biome check --write"

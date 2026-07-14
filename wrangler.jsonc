@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "avifnow",
+  "routes": [
+    {
+      "pattern": "avif.now",
+      "custom_domain": true
+    }
+  ],
+  "compatibility_date": "2026-04-30"
+}
