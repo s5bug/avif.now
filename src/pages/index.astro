@@ -1,0 +1,225 @@
+---
+import 'modern-normalize/modern-normalize.css'
+import Converter from '../components/Converter.svelte'
+
+export const prerender: boolean = true
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content={Astro.generator}>
+    <title>avif.now</title>
+
+    <meta property="og:type" content="website">
+    <meta
+      property="og:title"
+      content="avif.now: Create high-quality animated images"
+    >
+    <meta
+      property="og:description"
+      content="Say NO to muddy laggy GIFs! Convert your video clips to AVIF online."
+    >
+    <meta property="og:image" content="https://avif.now/og_crf25.avif">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/avif">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      name="twitter:title"
+      content="avif.now: Create high-quality animated images"
+    >
+    <meta
+      name="twitter:description"
+      content="Say NO to muddy laggy GIFs! Convert your video clips to AVIF online."
+    >
+    <meta name="twitter:image" content="https://avif.now/og_crf25.avif">
+  </head>
+  <body>
+    <header>
+      <div class="restrict-width header-container">
+        <h1>avif.now</h1>
+
+        <nav>
+          <a href="/faq">FAQ</a>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="restrict-width">
+        <h2>Convert:</h2>
+        <Converter client:load />
+      </div>
+    </section>
+
+    <main>
+      <div class="slight-restrict-width features-grid">
+        <article>
+          <h2>Tired of muddy colors?</h2>
+          <img
+            width="320"
+            height="180"
+            src="/avif_from_gif.avif"
+            alt="A clip of Final Fantasy XIV with extreme color banding (converted from GIF)"
+          >
+        </article>
+
+        <article>
+          <h2>Tired of laggy frames?</h2>
+          <img
+            width="320"
+            height="180"
+            src="/gif_delay_as_avif.avif"
+            alt="A clip of Saul Goodman at 8.33 FPS (a common GIF framerate)"
+          >
+        </article>
+
+        <article>
+          <h2>Tired of huge uploads?</h2>
+          <img
+            width="320"
+            height="180"
+            src="/slow_upload.avif"
+            alt="A clip of uploading a GIF to Discord, the GIF is 13 megabytes"
+          >
+        </article>
+      </div>
+      <div class="slight-restrict-width">
+        <div style="width: fit-content; margin: 0 auto;">
+          <h3>AVIF gives you:</h3>
+          <ul>
+            <li>high quality with a small filesize</li>
+            <li>any framerate you want</li>
+            <li>native support in Discord</li>
+          </ul>
+        </div>
+      </div>
+      <div class="slight-restrict-width">
+        <img
+          width="600"
+          height="315"
+          src="/og_crf25.avif"
+          alt="Animated rainbow text top left, a rainbow bar to the right, and the AVIF logo in the bottom center. The text reads: Truecolor. 60 FPS."
+        >
+      </div>
+    </main>
+
+    <footer>
+      <div class="slight-restrict-width footer-container">
+        <p>
+          Made with love and
+          <a href="https://github.com/Yahweasel/libav.js">libav.js</a>
+          &#x2764;&#xfe0e;
+        </p>
+        <p>
+          Not affiliated with Alliance for Open Media.
+          <a href="https://github.com/s5bug/avif.now">Source</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+:root {
+  color-scheme: dark light;
+
+  --bg-header-footer: #cccccc;
+  --bg-main: #ffffff;
+  --text-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-header-footer: #000000;
+    --bg-main: #222222;
+    --text-color: #ffffff;
+  }
+}
+
+html {
+  background-color: var(--bg-header-footer);
+}
+
+header,
+main,
+section,
+footer {
+  padding: 8px;
+}
+
+main {
+  background-color: var(--bg-main);
+}
+
+header,
+footer,
+section {
+  background-color: var(--bg-header-footer);
+}
+
+.restrict-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slight-restrict-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-container > h1 {
+  grid-column: 2;
+  text-align: center;
+}
+
+.header-container > nav {
+  grid-column: 3;
+  text-align: right;
+}
+
+.features-grid {
+  display: grid;
+  /* default: all features in one column */
+  grid-template-columns: 1fr;
+}
+
+/* TODO adjust this */
+@media (min-width: 984px) {
+  .features-grid {
+    /* if the screen is large enough, display all 3 in one row */
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.features-grid h2 {
+  text-align: center;
+}
+
+.features-grid article {
+  min-width: 0;
+}
+
+main img {
+  display: block;
+  margin: 0 auto;
+
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+</style>

@@ -1,0 +1,7 @@
+allowBuilds:
+  esbuild: true
+  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/65ce461de1add4c96bc74fac52bd239f900ec11f(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec): true
+  sharp: true
+  workerd: true
+patchedDependencies:
+  libav.js@6.9.8: patches/libav.js@6.9.8.patch

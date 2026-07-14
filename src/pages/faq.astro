@@ -1,0 +1,158 @@
+---
+import 'modern-normalize/modern-normalize.css'
+
+export const prerender: boolean = true
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width">
+    <meta name="generator" content={Astro.generator}>
+    <title>avif.now - Frequently Asked Questions</title>
+  </head>
+  <body>
+    <header>
+      <div class="restrict-width header-container">
+        <h1><a href="/">avif.now</a> FAQ</h1>
+      </div>
+    </header>
+
+    <main>
+      <div class="restrict-width">
+        <article>
+          <h2>Are my files ever uploaded?</h2>
+          <p>
+            The conversion from video to AVIF is slow mainly because it happens
+            in your browser. The file you select for AVIF conversion is never
+            uploaded to a backend server.
+          </p>
+          <p>
+            Tenor URLs on the other hand <em>are</em> sent to the backend
+            server, as retrieving the URL of the MP4 from the Tenor View URL
+            can't be done in a browser.
+          </p>
+        </article>
+
+        <article>
+          <h2>Why is there a Tenor option?</h2>
+          <p>
+            With Tenor sunsetting its API, and being owned by Google, I wouldn't
+            be surprised if Tenor eventually just stops working in Discord or is
+            just shut down altogether. I don't think this will happen for a long
+            long time (if it even happens at all), but I want to get a head
+            start.
+          </p>
+        </article>
+
+        <article>
+          <h2>Why not WebP?</h2>
+          <p>
+            For short video clips and the stuff you'd find on Tenor, there's
+            really not much of a difference. I'm simply just a fan of AV1. While
+            this webpage encodes 8-bit color to make hardware decoding more
+            likely, AVIF does happen to support 10-bit color. Additionally, for
+            lossy compression, AVIF beats out WebP on filesize (at the cost of
+            encoding speed).
+          </p>
+        </article>
+
+        <article>
+          <h2>What flags does the website use?</h2>
+          <p>
+            The website uses the exact FFmpeg flags suggested when you select a
+            video, except the <code>-cpu-used 1</code>
+            the website suggests is replaced with <code>-cpu-used 4</code> on
+            the website itself. Otherwise encoding even a small video would take
+            multiple hours.
+          </p>
+        </article>
+      </div>
+    </main>
+
+    <footer>
+      <div class="slight-restrict-width footer-container">
+        <p>
+          Made with love and
+          <a href="https://github.com/Yahweasel/libav.js">libav.js</a>
+          &#x2764;&#xfe0e;
+        </p>
+        <p>
+          Not affiliated with Alliance for Open Media.
+          <a href="https://github.com/s5bug/avif.now">Source</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
+
+<style>
+:root {
+  color-scheme: dark light;
+
+  --bg-header-footer: #cccccc;
+  --bg-main: #ffffff;
+  --text-color: #000000;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-header-footer: #000000;
+    --bg-main: #222222;
+    --text-color: #ffffff;
+  }
+}
+
+html {
+  background-color: var(--bg-header-footer);
+}
+
+header,
+main,
+section,
+footer {
+  padding: 8px;
+}
+
+main {
+  background-color: var(--bg-main);
+}
+
+header,
+footer,
+section {
+  background-color: var(--bg-header-footer);
+}
+
+.restrict-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.slight-restrict-width {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.header-container > h1 {
+  grid-column: 2;
+  text-align: center;
+}
+
+.header-container > nav {
+  grid-column: 3;
+  text-align: right;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+}
+</style>
