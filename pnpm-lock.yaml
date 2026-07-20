@@ -18,7 +18,7 @@ importers:
         version: 14.1.3(@types/node@26.1.1)(astro@7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0))(esbuild@0.28.1)(wrangler@4.112.0)(yaml@2.9.0)
       '@astrojs/svelte':
         specifier: ^9.0.1
-        version: 9.0.1(@types/node@26.1.1)(astro@7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0))(esbuild@0.28.1)(svelte@5.56.5)(typescript@6.0.3)(yaml@2.9.0)
+        version: 9.0.1(@types/node@26.1.1)(astro@7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0))(esbuild@0.28.1)(svelte@5.56.6)(typescript@6.0.3)(yaml@2.9.0)
       astro:
         specifier: ^7.1.1
         version: 7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0)
@@ -29,8 +29,8 @@ importers:
         specifier: ^3.0.1
         version: 3.0.1
       svelte:
-        specifier: ^5.56.5
-        version: 5.56.5
+        specifier: ^5.56.6
+        version: 5.56.6
       typescript:
         specifier: ^6.0.3
         version: 6.0.3
@@ -49,7 +49,7 @@ importers:
         version: 26.1.1
       svelte-check:
         specifier: ^4.7.3
-        version: 4.7.3(picomatch@4.0.5)(svelte@5.56.5)(typescript@6.0.3)
+        version: 4.7.3(picomatch@4.0.5)(svelte@5.56.6)(typescript@6.0.3)
 
 packages:
 
@@ -1326,8 +1326,8 @@ packages:
   esm-env@1.2.2:
     resolution: {integrity: sha512-Epxrv+Nr/CaL4ZcFGPJIYLWFom+YeV1DqMLHJoEd9SYRxNbaFruBwfEX/kkHUJf55j2+TUbmDcmuilbP1TmXHA==}
 
-  esrap@2.2.13:
-    resolution: {integrity: sha512-m8jH5hZgJE2RRUK/jjkGPcJEDAV+dYnZYFkosQaPTcE+Yw4xynXHOo6FUdwaWBtdR3b1MMa7wEDTSHeR2VWsGA==}
+  esrap@2.3.0:
+    resolution: {integrity: sha512-GQ/7RN8uOtEfNpzZzBMTzW9JBcX42oaSVtPzdF+6cEL8pqIL094iUpr9jzYGn4O4P/1S60dJ6izyT8F4LYARng==}
     peerDependencies:
       '@typescript-eslint/types': ^8.2.0
     peerDependenciesMeta:
@@ -1835,8 +1835,8 @@ packages:
       svelte: ^3.55 || ^4.0.0-next.0 || ^4.0 || ^5.0.0-next.0
       typescript: ^4.9.4 || ^5.0.0 || ^6.0.0
 
-  svelte@5.56.5:
-    resolution: {integrity: sha512-P03YJmUy2JoOxYHb4Ka3oFat1hq2ko2it1MOItSjsJ4B6WgZPLc3+RyyU+57OGWhs3Ieq74EJpZtSnNXdAGgDw==}
+  svelte@5.56.6:
+    resolution: {integrity: sha512-p4HDLDogGHKRKCrgckQHNs5PEfXkju6JI5jTywueaKJI5hAdjPohEhRtQ0M1SWC/+TA73SPln+r7srr+7e4nZA==}
     engines: {node: '>=18'}
 
   svgo@4.0.2:
@@ -2462,12 +2462,12 @@ snapshots:
     dependencies:
       prismjs: 1.30.0
 
-  '@astrojs/svelte@9.0.1(@types/node@26.1.1)(astro@7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0))(esbuild@0.28.1)(svelte@5.56.5)(typescript@6.0.3)(yaml@2.9.0)':
+  '@astrojs/svelte@9.0.1(@types/node@26.1.1)(astro@7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0))(esbuild@0.28.1)(svelte@5.56.6)(typescript@6.0.3)(yaml@2.9.0)':
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 7.2.0(svelte@5.56.5)(vite@8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0))
+      '@sveltejs/vite-plugin-svelte': 7.2.0(svelte@5.56.6)(vite@8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0))
       astro: 7.1.1(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.2)(@types/node@26.1.1)(yaml@2.9.0)
-      svelte: 5.56.5
-      svelte2tsx: 0.7.57(svelte@5.56.5)(typescript@6.0.3)
+      svelte: 5.56.6
+      svelte2tsx: 0.7.57(svelte@5.56.6)(typescript@6.0.3)
       typescript: 6.0.3
       vite: 8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0)
       vitefu: 1.1.3(vite@8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0))
@@ -3137,12 +3137,12 @@ snapshots:
 
   '@sveltejs/load-config@0.2.0': {}
 
-  '@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.5)(vite@8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0))':
+  '@sveltejs/vite-plugin-svelte@7.2.0(svelte@5.56.6)(vite@8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0))':
     dependencies:
       deepmerge: 4.3.1
       magic-string: 0.30.21
       obug: 2.1.4
-      svelte: 5.56.5
+      svelte: 5.56.6
       vite: 8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0)
       vitefu: 1.1.3(vite@8.1.3(@types/node@26.1.1)(esbuild@0.28.1)(yaml@2.9.0))
 
@@ -3523,7 +3523,7 @@ snapshots:
 
   esm-env@1.2.2: {}
 
-  esrap@2.2.13:
+  esrap@2.3.0:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.5
 
@@ -4070,7 +4070,7 @@ snapshots:
 
   supports-color@10.2.2: {}
 
-  svelte-check@4.7.3(picomatch@4.0.5)(svelte@5.56.5)(typescript@6.0.3):
+  svelte-check@4.7.3(picomatch@4.0.5)(svelte@5.56.6)(typescript@6.0.3):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       '@sveltejs/load-config': 0.2.0
@@ -4078,19 +4078,19 @@ snapshots:
       fdir: 6.5.0(picomatch@4.0.5)
       picocolors: 1.1.1
       sade: 1.8.1
-      svelte: 5.56.5
+      svelte: 5.56.6
       typescript: 6.0.3
     transitivePeerDependencies:
       - picomatch
 
-  svelte2tsx@0.7.57(svelte@5.56.5)(typescript@6.0.3):
+  svelte2tsx@0.7.57(svelte@5.56.6)(typescript@6.0.3):
     dependencies:
       dedent-js: 1.0.1
       scule: 1.3.0
-      svelte: 5.56.5
+      svelte: 5.56.6
       typescript: 6.0.3
 
-  svelte@5.56.5:
+  svelte@5.56.6:
     dependencies:
       '@jridgewell/remapping': 2.3.5
       '@jridgewell/sourcemap-codec': 1.5.5
@@ -4103,7 +4103,7 @@ snapshots:
       clsx: 2.1.1
       devalue: 5.8.1
       esm-env: 1.2.2
-      esrap: 2.2.13
+      esrap: 2.3.0
       is-reference: 3.0.3
       locate-character: 3.0.0
       magic-string: 0.30.21
