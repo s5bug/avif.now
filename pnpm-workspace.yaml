@@ -1,23 +1,11 @@
 allowBuilds:
   esbuild: true
   libav.js: true
+  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/65ce461de1add4c96bc74fac52bd239f900ec11f(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec): true
   sharp: true
   workerd: true
 minimumReleaseAgeExclude:
-  - '@astrojs/cloudflare@14.1.6'
-  - '@astrojs/internal-helpers@0.10.2'
-  - '@astrojs/markdown-satteri@0.3.5'
-  - '@biomejs/biome@2.5.6'
-  - '@biomejs/cli-darwin-arm64@2.5.6'
-  - '@biomejs/cli-darwin-x64@2.5.6'
-  - '@biomejs/cli-linux-arm64-musl@2.5.6'
-  - '@biomejs/cli-linux-arm64@2.5.6'
-  - '@biomejs/cli-linux-x64-musl@2.5.6'
-  - '@biomejs/cli-linux-x64@2.5.6'
-  - '@biomejs/cli-win32-arm64@2.5.6'
-  - '@biomejs/cli-win32-x64@2.5.6'
-  - astro@7.1.5
-  - miniflare@4.20260722.1
-  - wrangler@4.115.0
+  - miniflare@5.20260730.0-alpha
+  - wrangler@4.118.0
 patchedDependencies:
   libav.js@6.9.8: patches/libav.js@6.9.8.patch
