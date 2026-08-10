@@ -26,6 +26,6 @@
     "@astrojs/check": "^0.9.10",
     "@biomejs/biome": "2.5.7",
     "@types/node": "^26.1.2",
-    "svelte-check": "^4.7.4"
+    "svelte-check": "^4.7.5"
   }
 }
