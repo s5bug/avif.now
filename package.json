@@ -25,7 +25,7 @@
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@biomejs/biome": "2.5.7",
-    "@types/node": "^26.1.2",
+    "@types/node": "^26.2.0",
     "svelte-check": "^4.7.4"
   }
 }
