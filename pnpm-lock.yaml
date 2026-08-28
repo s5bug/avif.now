@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 patchedDependencies:
-  libav.js@6.9.8: fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec
+  libav.js@6.10.9: fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec
 
 importers:
 
@@ -21,8 +21,8 @@ importers:
         specifier: ^7.2.8
         version: 7.2.8(@emnapi/core@1.11.1)(@emnapi/runtime@1.11.3)(@types/node@26.4.0)(yaml@2.9.0)
       libav.js:
-        specifier: github:Yahweasel/libav.js#v6.9.8.1
-        version: https://codeload.github.com/Yahweasel/libav.js/tar.gz/65ce461de1add4c96bc74fac52bd239f900ec11f(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec)
+        specifier: github:Yahweasel/libav.js#v6.10.9.0
+        version: https://codeload.github.com/Yahweasel/libav.js/tar.gz/c80e885c3461f7bb7ea565c9631b34243ae0dbf1(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec)
       modern-normalize:
         specifier: ^3.0.1
         version: 3.0.1
@@ -1638,9 +1638,9 @@ packages:
     resolution: {integrity: sha512-o+NO+8WrRiQEE4/7nwRJhN1HWpVmJm511pBHUxPLtp0BUISzlBplORYSmTclCnJvQq2tKu/sgl3xVpkc7ZWuQQ==}
     engines: {node: '>=6'}
 
-  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/65ce461de1add4c96bc74fac52bd239f900ec11f:
-    resolution: {gitHosted: true, tarball: https://codeload.github.com/Yahweasel/libav.js/tar.gz/65ce461de1add4c96bc74fac52bd239f900ec11f}
-    version: 6.9.8
+  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/c80e885c3461f7bb7ea565c9631b34243ae0dbf1:
+    resolution: {gitHosted: true, integrity: sha512-3Wq/SFPZDIyTDRl481JtX9JB5VaSSZFd9R9nR9uqfiULQYbpOdRjWY/CO1D8udVFUWEBjxywvurwVoZZSqdHXQ==, tarball: https://codeload.github.com/Yahweasel/libav.js/tar.gz/c80e885c3461f7bb7ea565c9631b34243ae0dbf1}
+    version: 6.10.9
 
   lightningcss-android-arm64@1.33.0:
     resolution: {integrity: sha512-gEpRTalKdosp4Bb8qWtc2iOgE5SeIHlpS1up9bFq2wAyYhl1UdTObYiHe98zEM9SQvSoqQZ1IQD0JNpg3Ml5pg==}
@@ -3786,7 +3786,7 @@ snapshots:
 
   kleur@4.1.5: {}
 
-  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/65ce461de1add4c96bc74fac52bd239f900ec11f(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec): {}
+  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/c80e885c3461f7bb7ea565c9631b34243ae0dbf1(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec): {}
 
   lightningcss-android-arm64@1.33.0:
     optional: true
