@@ -13,10 +13,10 @@ if (import.meta.env.SSR) {
 } else {
   const LibAV = await import('libav.js/from-browser-to-avif')
   const libavFactoryUrl = await import(
-    '../../node_modules/libav.js/dist/libav-6.9.8.1-from-browser-to-avif.wasm.mjs?url'
+    '../../node_modules/libav.js/dist/libav-6.10.9.0-from-browser-to-avif.wasm.mjs?url'
   )
   const libavWasmUrl = await import(
-    '../../node_modules/libav.js/dist/libav-6.9.8.1-from-browser-to-avif.wasm.wasm?url'
+    '../../node_modules/libav.js/dist/libav-6.10.9.0-from-browser-to-avif.wasm.wasm?url'
   )
 
   libav = LibAV.default.LibAV({

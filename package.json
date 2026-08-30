@@ -15,12 +15,12 @@
   "dependencies": {
     "@astrojs/cloudflare": "^14.2.5",
     "@astrojs/svelte": "^9.0.1",
-    "astro": "^7.2.8",
+    "astro": "^7.2.9",
     "libav.js": "github:Yahweasel/libav.js#v6.10.9.0",
     "modern-normalize": "^3.0.1",
-    "svelte": "^5.56.10",
+    "svelte": "^5.57.0",
     "typescript": "^6.0.3",
-    "wrangler": "^4.126.0"
+    "wrangler": "^4.127.1"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
