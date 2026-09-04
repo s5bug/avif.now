@@ -20,12 +20,12 @@
     "modern-normalize": "^3.0.1",
     "svelte": "^5.57.0",
     "typescript": "^6.0.3",
-    "wrangler": "^4.127.1"
+    "wrangler": "^4.128.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@biomejs/biome": "2.5.11",
-    "@types/node": "^26.4.0",
+    "@types/node": "^26.4.1",
     "svelte-check": "^4.7.6"
   }
 }
