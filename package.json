@@ -13,14 +13,14 @@
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.2.6",
+    "@astrojs/cloudflare": "^14.3.0",
     "@astrojs/svelte": "^9.0.1",
-    "astro": "^7.2.10",
+    "astro": "^7.3.1",
     "libav.js": "github:Yahweasel/libav.js#v6.10.9.0",
     "modern-normalize": "^3.0.1",
     "svelte": "^5.57.0",
     "typescript": "^6.0.3",
-    "wrangler": "^4.128.0"
+    "wrangler": "^4.129.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
