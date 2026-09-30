@@ -13,7 +13,7 @@ importers:
     dependencies:
       '@astrojs/cloudflare':
         specifier: ^14.3.3
-        version: 14.3.3(@types/node@26.6.3)(astro@7.3.5(@types/node@26.6.3)(yaml@2.9.1))(esbuild@0.28.2)(wrangler@4.142.0(@types/node@26.6.3))(yaml@2.9.1)
+        version: 14.3.3(@types/node@26.6.3)(astro@7.3.5(@types/node@26.6.3)(yaml@2.9.1))(esbuild@0.28.2)(wrangler@4.143.1(@types/node@26.6.3))(yaml@2.9.1)
       '@astrojs/svelte':
         specifier: ^9.0.1
         version: 9.0.1(@types/node@26.6.3)(astro@7.3.5(@types/node@26.6.3)(yaml@2.9.1))(esbuild@0.28.2)(svelte@5.57.1)(typescript@6.0.3)(yaml@2.9.1)
@@ -33,8 +33,8 @@ importers:
         specifier: ^6.0.3
         version: 6.0.3
       wrangler:
-        specifier: ^4.142.0
-        version: 4.142.0(@types/node@26.6.3)
+        specifier: ^4.143.1
+        version: 4.143.1(@types/node@26.6.3)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.10
@@ -326,12 +326,12 @@ packages:
       workerd:
         optional: true
 
-  '@cloudflare/vite-plugin@1.61.0':
-    resolution: {integrity: sha512-+ksYktyH08JCGBfqrVANyx5ex7F/k1Da54K+ZQ6fFJPfeCbY98oIM0UBdxq2m9G6qO3cDTIGapqWc6QxM+QDUQ==}
+  '@cloudflare/vite-plugin@1.62.1':
+    resolution: {integrity: sha512-slwUq/+f+1db4bfMgEfz/pB100LMT4hLb725aj8SSqWgwTzN6Rpd+TjdTNzz5WdFe+AR1kpzAxsutQj0UT0a1g==}
     hasBin: true
     peerDependencies:
       vite: ^6.1.0 || ^7.0.0 || ^8.0.0
-      wrangler: ^4.142.0
+      wrangler: ^4.143.1
 
   '@cloudflare/workerd-darwin-64@1.20260926.1':
     resolution: {integrity: sha512-VCIpwgJu5Dm1o+VHLclNOKIdpttEqss7oDHS5DYxgVoonM9Dxxxr1xCQvJbh6IXFuQ1DDrbm5krjte5NsTgX3Q==}
@@ -1766,8 +1766,8 @@ packages:
   micromark-util-types@2.0.3:
     resolution: {integrity: sha512-oxB2Ik03hI0gv+VNn9tnh1t1YEe9MDPptViAEgfdf3YQHsn0pzGTgCdlSCJXcwhqm8phaEuM7zeEu3QQzVBrPg==}
 
-  miniflare@5.20260926.0-alpha:
-    resolution: {integrity: sha512-m/M3rpLnaouw6QSoKzylfw6Z1dnOwRM48idnZ7kc5ivRqBXANFQ8XqKCyQ/V+xqQ9Rg1L99j4WkZGVU9uT4L2w==}
+  miniflare@5.20260926.1-alpha:
+    resolution: {integrity: sha512-vc4lgl8YVxR2aundPnVPTIcL46UQKK+ebW7yinXNE1Y9joFS0JoakMazr7r3M8DXRvaemKS8EEmszkv/b05qUw==}
     engines: {node: '>=22.0.0'}
 
   modern-normalize@3.0.1:
@@ -2073,8 +2073,8 @@ packages:
   undici-types@8.9.0:
     resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
-  undici@7.29.0:
-    resolution: {integrity: sha512-IDxfleLmmbSskfWSUATiN1nfn2rDuvnMOqb5CWR92iIfojA0Ud+ulOAAEQ57LPr9rWmsreUyf5lwyao+7GNNVw==}
+  undici@7.29.1:
+    resolution: {integrity: sha512-RYONW2MeafgYlkVOKYKkA/Ag7BmXqgIWCa8t1m0JcxrQg9pI9lEqRhAOruOBCbAohOa/gkCF+iPi9hrgvTzu6Q==}
     engines: {node: '>=20.18.1'}
 
   undici@8.11.2:
@@ -2341,8 +2341,8 @@ packages:
     engines: {node: '>=16'}
     hasBin: true
 
-  wrangler@4.142.0:
-    resolution: {integrity: sha512-oqquqqtHOevn17hzI7qRzU+MiOaCU2UZRLPIZStjGlhwYbxe3hk4Stq3knfcIlGfMSfgM4iycZKeb1fEF5mRTQ==}
+  wrangler@4.143.1:
+    resolution: {integrity: sha512-ilQJRMRcMgdk82XWIg7hlgeB1I2CoOWmSiJeoqZufoNCWUiJTN5DaYPYb6M/oIXBXk3+IQIxNDgdtPUuxcxdeg==}
     engines: {node: '>=22.0.0'}
     hasBin: true
     peerDependencies:
@@ -2436,15 +2436,15 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/cloudflare@14.3.3(@types/node@26.6.3)(astro@7.3.5(@types/node@26.6.3)(yaml@2.9.1))(esbuild@0.28.2)(wrangler@4.142.0(@types/node@26.6.3))(yaml@2.9.1)':
+  '@astrojs/cloudflare@14.3.3(@types/node@26.6.3)(astro@7.3.5(@types/node@26.6.3)(yaml@2.9.1))(esbuild@0.28.2)(wrangler@4.143.1(@types/node@26.6.3))(yaml@2.9.1)':
     dependencies:
       '@astrojs/internal-helpers': 0.11.0
       '@astrojs/underscore-redirects': 1.0.4
-      '@cloudflare/vite-plugin': 1.61.0(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(yaml@2.9.1))(wrangler@4.142.0(@types/node@26.6.3))
+      '@cloudflare/vite-plugin': 1.62.1(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(yaml@2.9.1))(wrangler@4.143.1(@types/node@26.6.3))
       astro: 7.3.5(@types/node@26.6.3)(yaml@2.9.1)
       piccolore: 0.1.3
       vite: 8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(yaml@2.9.1)
-      wrangler: 4.142.0(@types/node@26.6.3)
+      wrangler: 4.143.1(@types/node@26.6.3)
     transitivePeerDependencies:
       - '@types/node'
       - '@vitejs/devtools'
@@ -2698,14 +2698,14 @@ snapshots:
     optionalDependencies:
       workerd: 1.20260926.1
 
-  '@cloudflare/vite-plugin@1.61.0(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(yaml@2.9.1))(wrangler@4.142.0(@types/node@26.6.3))':
+  '@cloudflare/vite-plugin@1.62.1(@types/node@26.6.3)(vite@8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(yaml@2.9.1))(wrangler@4.143.1(@types/node@26.6.3))':
     dependencies:
       '@cloudflare/unenv-preset': 2.16.2(unenv@2.0.0-rc.24)(workerd@1.20260926.1)
-      miniflare: 5.20260926.0-alpha(@types/node@26.6.3)
+      miniflare: 5.20260926.1-alpha(@types/node@26.6.3)
       unenv: 2.0.0-rc.24
       vite: 8.3.1(@types/node@26.6.3)(esbuild@0.28.2)(yaml@2.9.1)
       workerd: 1.20260926.1
-      wrangler: 4.142.0(@types/node@26.6.3)
+      wrangler: 4.143.1(@types/node@26.6.3)
       ws: 8.21.0
     transitivePeerDependencies:
       - '@types/node'
@@ -3917,11 +3917,11 @@ snapshots:
 
   micromark-util-types@2.0.3: {}
 
-  miniflare@5.20260926.0-alpha(@types/node@26.6.3):
+  miniflare@5.20260926.1-alpha(@types/node@26.6.3):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       sharp: 0.35.4(@types/node@26.6.3)
-      undici: 7.29.0
+      undici: 7.29.1
       workerd: 1.20260926.1
       ws: 8.21.0
       youch: 4.1.0-beta.10
@@ -4286,7 +4286,7 @@ snapshots:
 
   undici-types@8.9.0: {}
 
-  undici@7.29.0: {}
+  undici@7.29.1: {}
 
   undici@8.11.2: {}
 
@@ -4489,13 +4489,13 @@ snapshots:
       '@cloudflare/workerd-linux-arm64': 1.20260926.1
       '@cloudflare/workerd-windows-64': 1.20260926.1
 
-  wrangler@4.142.0(@types/node@26.6.3):
+  wrangler@4.143.1(@types/node@26.6.3):
     dependencies:
       '@cloudflare/kv-asset-handler': 0.5.0
       '@cloudflare/unenv-preset': 2.16.2(unenv@2.0.0-rc.24)(workerd@1.20260926.1)
       blake3-wasm: 2.1.5
       esbuild: 0.28.1
-      miniflare: 5.20260926.0-alpha(@types/node@26.6.3)
+      miniflare: 5.20260926.1-alpha(@types/node@26.6.3)
       path-to-regexp: 6.3.0
       unenv: 2.0.0-rc.24
       workerd: 1.20260926.1
