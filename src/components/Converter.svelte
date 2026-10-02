@@ -535,7 +535,7 @@ let formattedRemaining = $derived.by(() => {
     type="text"
     pattern="https:\/\/tenor\.com\/view\/.*"
     bind:value={tenorViewUrl}
-    oninput={() => usingForConversion = null}
+    oninput={() => (usingForConversion = null)}
   >
   <button
     type="button"
@@ -578,7 +578,9 @@ let formattedRemaining = $derived.by(() => {
   <button
     id="convert"
     type="button"
-    disabled={usingForConversion === null || nameForFfmpeg === null || startTime !== null}
+    disabled={usingForConversion === null ||
+      nameForFfmpeg === null ||
+      startTime !== null}
     onclick={convertFile}
   >
     Convert
