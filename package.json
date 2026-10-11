@@ -15,17 +15,17 @@
   "dependencies": {
     "@astrojs/cloudflare": "^14.3.4",
     "@astrojs/svelte": "^9.0.1",
-    "astro": "^7.3.7",
+    "astro": "^7.3.8",
     "libav.js": "github:Yahweasel/libav.js#v6.10.9.0",
     "modern-normalize": "^3.0.1",
     "svelte": "^5.57.2",
     "typescript": "^6.0.3",
-    "wrangler": "^4.148.0"
+    "wrangler": "^4.149.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.10",
     "@biomejs/biome": "2.5.15",
-    "@types/node": "^26.6.4",
+    "@types/node": "^26.6.5",
     "svelte-check": "^4.7.6"
   }
 }
