@@ -13,9 +13,9 @@
     "fmt": "biome check --write"
   },
   "dependencies": {
-    "@astrojs/cloudflare": "^14.4.1",
-    "@astrojs/svelte": "^9.1.0",
-    "astro": "^7.4.1",
+    "@astrojs/cloudflare": "^14.4.2",
+    "@astrojs/svelte": "^9.1.1",
+    "astro": "^7.4.2",
     "libav.js": "github:Yahweasel/libav.js#v6.10.9.0",
     "modern-normalize": "^3.0.1",
     "svelte": "^5.57.2",
@@ -23,7 +23,7 @@
     "wrangler": "^4.151.3"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.9.11",
+    "@astrojs/check": "^0.9.12",
     "@biomejs/biome": "2.5.15",
     "@types/node": "^26.6.5",
     "svelte-check": "^4.7.7"
