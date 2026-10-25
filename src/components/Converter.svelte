@@ -13,16 +13,15 @@ if (import.meta.env.SSR) {
 } else {
   const LibAV = await import('libav.js/from-browser-to-avif')
   const libavFactoryUrl = await import(
-    '../../node_modules/libav.js/dist/libav-6.10.9.0-from-browser-to-avif.wasm.mjs?url'
+    '../../node_modules/libav.js/dist/libav-6.10.9.0-from-browser-to-avif.thr.mjs?url'
   )
   const libavWasmUrl = await import(
-    '../../node_modules/libav.js/dist/libav-6.10.9.0-from-browser-to-avif.wasm.wasm?url'
+    '../../node_modules/libav.js/dist/libav-6.10.9.0-from-browser-to-avif.thr.wasm?url'
   )
 
   libav = LibAV.default.LibAV({
     noworker: false,
-    nothreads: true,
-    yesthreads: false,
+    yesthreads: true,
     toImport: libavFactoryUrl.default,
     wasmurl: libavWasmUrl.default,
   })
@@ -119,20 +118,24 @@ const setupEncoder = async (
   width: number,
   height: number,
 ): Promise<EncodeCtx> => {
+  const threads = Math.min(navigator.hardwareConcurrency || 4, 8)
+
   const [_codec, c_ctx, frame_ptr, pkt_ptr, _frame_size] =
     await av.ff_init_encoder('libaom-av1', {
       ctx: {
         width,
         height,
         pix_fmt: av.AV_PIX_FMT_YUV420P,
+        bit_rate: 0,
       },
       // 1 tick = 1 microsecond
       time_base: [1, 1000000],
       options: {
         'cpu-used': '4',
-        // 'row-mt': '1',
+        'row-mt': '1',
         crf: '40',
         flags: '+global_header',
+        threads: `${threads}`,
       },
     })
 

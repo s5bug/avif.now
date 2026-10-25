@@ -676,3 +676,40 @@ index bb908bc1f22ff06434c1b3160a4d9aa91431f271..8c670a1ca107176c492bee81b96cd2fa
    },
    "repository": {
      "type": "git",
+diff --git a/src/post.in.js b/src/post.in.js
+index 9cbb3b779bc5285b7db61a31c4c682f123dc4992..a73f52dca24fd25423ce3491093236f13b251dc3 100644
+--- a/src/post.in.js
++++ b/src/post.in.js
+@@ -47,6 +47,19 @@ var ERRNO_CODES = {
+  * if we're a Worker */
+ var CAccessors = {};
+ 
++/* Emscripten's cwrap returns the raw wasm export for purely numeric
++ * signatures, but in a pthread the exports are only assigned once the wasm
++ * module arrives, after this code has already run. Look the function up on
++ * first call instead. */
++function lazyCwrap(ident, returnType, argTypes, opts) {
++    var f = null;
++    return function() {
++        if (!f)
++            f = Module.cwrap(ident, returnType, argTypes, opts);
++        return f.apply(void 0, arguments);
++    };
++}
++
+ /**
+  * Allocate and copy in a 32-bit int list.
+  * @param list  List of numbers to copy in
+diff --git a/tools/mk-post.js b/tools/mk-post.js
+index 1d7923b48bf579a1a4297cdebab7484c4d39e667..f7472e0b852cf6871bf98f4a5d9483f13ce2b0ae 100755
+--- a/tools/mk-post.js
++++ b/tools/mk-post.js
+@@ -69,7 +69,7 @@ async function main() {
+             out += `var ${decl[0]} = ` +
+                 `Module.${decl[0]} = ` +
+                 `CAccessors.${decl[0]} = ` +
+-                `Module.cwrap(${s(decl[0])}, ${s(decl[1])}, ${s(decl[2])}`;
++                `lazyCwrap(${s(decl[0])}, ${s(decl[1])}, ${s(decl[2])}`;
+             if (decl[3] && decl[3].async)
+                 out += ", {async:true}";
+             out += ");\n";
