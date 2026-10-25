@@ -2,7 +2,7 @@ name: Deploy to Cloudflare Workers
 
 on:
   push:
-    branches: ['main']
+    branches: ["main"]
 
   workflow_dispatch:
 
@@ -10,7 +10,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: 'pages'
+  group: "pages"
   cancel-in-progress: true
 
 jobs:
@@ -31,7 +31,7 @@ jobs:
         uses: actions/setup-node@v7
         with:
           node-version: latest
-          cache: 'pnpm'
+          cache: "pnpm"
       - name: Set up Emscripten
         uses: emscripten-core/setup-emsdk@v16
       - name: Install dependencies
