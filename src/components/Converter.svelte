@@ -308,10 +308,10 @@ let commandForFfmpeg: string[] | null = $derived.by(() => {
     return [
       'ffmpeg',
       `-i "${nameForFfmpeg}"`,
-      '-c:v libaom-av1',
-      '-cpu-used 1',
-      '-b:v 0',
-      '-crf 40',
+      '-c:v libsvtav1',
+      '-preset 3',
+      '-crf 36',
+      '-svtav1-params tune=0:enable-variance-boost=1:enable-qm=1:qm-min=4',
       'my_avif.avif',
     ]
 })
@@ -574,6 +574,9 @@ let formattedRemaining = $derived.by(() => {
   {:else}
     <p><i>Select a video first!</i></p>
   {/if}
+  <p>
+    <a href="/faq#encoding-flags">FAQ: How can I squeeze out extra quality?</a>
+  </p>
 </div>
 
 <div>

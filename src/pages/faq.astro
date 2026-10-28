@@ -62,12 +62,151 @@ export const prerender: boolean = true
         <article>
           <h2>What flags does the website use?</h2>
           <p>
-            The website uses the exact FFmpeg flags suggested when you select a
-            video, except the <code>-cpu-used 1</code>{' '}
-            the website suggests is replaced with <code>-cpu-used 4</code> on
-            the website itself. Otherwise encoding even a small video would take
-            multiple hours.
+            The website uses <code>libaom-av1</code> instead of
+            <code>libsvtav1</code>, with <code>-cpu-used 4</code>.{' '}
+            <code>libsvtav1</code>{' '}
+            doesn't run well in browsers, and a{' '}
+            <code>-cpu-used</code>{' '}
+            lower (higher-effort) than 4 would result in untenable encoding
+            times.
           </p>
+        </article>
+
+        <article>
+          <h2 id="encoding-flags">How can I squeeze out extra quality?</h2>
+          <p>
+            The two easiest ways to get extra quality out of the encoder are:
+          </p>
+          <ol>
+            <li>
+              lower <code>-preset</code> towards 0 (longer encoding time for
+              better quality)
+            </li>
+            <li>
+              lower <code>-crf</code> towards 22 (higher filesize for better
+              quality, 22 is roughly the floor for perceptual losslessness)
+            </li>
+          </ol>
+          <p>
+            However, if you know things about your input file, you can do better
+            by tuning the AV1 encoder. <code>libsvtav1</code> has flags (and{' '}
+            <code>ffmpeg</code>{' '}
+            has filters) that allow you to do this. The default{' '}
+            <code>-svtav1-params</code>{' '}
+            provided by avif.now are:
+          </p>
+          <ol>
+            <li><code>tune=0</code></li>
+            <li><code>enable-variance-boost=1</code></li>
+            <li><code>enable-qm=1</code> and <code>qm-min=4</code></li>
+          </ol>
+
+          <h3>Gradients</h3>
+          <p>
+            If your source file has many gradients, and the default settings
+            result in noticable color banding,
+          </p>
+          <ol>
+            <li>
+              add <code>-pix_fmt yuv420p10le</code> after{' '}
+              <code>-c:v libsvtav1</code>.
+            </li>
+          </ol>
+
+          <h3>Blocky Video</h3>
+          <p>
+            If your source file is low-quality from a social media website (for
+            example Twitter),
+          </p>
+          <ol>
+            <li>
+              add <code>-vf "deblock=filter=strong:block=4"</code> before{' '}
+              <code>-c:v libsvtav1</code>
+            </li>
+            <li>
+              use <code>tune=1</code> instead of <code>tune=0</code> in{' '}
+              <code>-svtav1-params</code>
+            </li>
+            <li>
+              add <code>enable-dlf=2</code>, <code>enable-cdef=1</code>, and{' '}
+              <code>enable-restoration=1</code>{' '}
+              to <code>-svtav1-params</code>
+            </li>
+          </ol>
+
+          <h3>Noisy Video</h3>
+          <p>If your source file makes heavy use of noise or static,</p>
+          <ol>
+            <li>
+              add <code>film-grain=25</code> and{' '}
+              <code>film-grain-denoise=1</code>{' '}
+              to <code>-svtav1-params</code>
+            </li>
+            <li>
+              use <code>qm-min=0</code> instead of <code>qm-min=4</code> in{' '}
+              <code>-svtav1-params</code>
+            </li>
+          </ol>
+
+          <h3>Anime Clips</h3>
+          <p>If your source file is 2d animation / animated clips,</p>
+          <ol>
+            <li>
+              add <code>enable-variance-boost=1</code> to{' '}
+              <code>-svtav1-params</code>
+            </li>
+            <li>add <code>qm-max=8</code> to <code>-svtav1-params</code></li>
+            <li>
+              add <code>tf-strength=1</code> to <code>-svtav1-params</code>
+            </li>
+            <li>add <code>scm=2</code> to <code>-svtav1-params</code></li>
+          </ol>
+
+          <h3>High-Detail Soft-Edge 3D (most 3D games)</h3>
+          <p>
+            If your source file is footage of a 3d game with soft world edges
+            (and optionally hard UI edges),
+          </p>
+          <ol>
+            <li>add <code>sharpness=1</code> to <code>-svtav1-params</code></li>
+            <li>
+              add <code>variance-boost-strength=2</code> to{' '}
+              <code>-svtav1-params</code>
+            </li>
+            <li>
+              add <code>tf-strength=1</code> to <code>-svtav1-params</code>
+            </li>
+          </ol>
+
+          <h3>High-Detail Hard-Edge 3D (e.g. Minecraft with Shaders)</h3>
+          <p>
+            If your source file is footage of a 3d game with hard world edges,
+          </p>
+          <ol>
+            <li>add <code>scm=0</code> to <code>-svtav1-params</code></li>
+            <li>
+              add <code>variance-boost-strength=3</code> to{' '}
+              <code>-svtav1-params</code>
+            </li>
+            <li>
+              add <code>film-grain=4</code>, <code>film-grain-denoise=0</code>,
+              and <code>tf-strength=1</code> to <code>-svtav1-params</code>
+            </li>
+          </ol>
+
+          <h3>Low-Detail Hard-Edge 3D (e.g. Vanilla Minecraft)</h3>
+          <p>
+            If your source file is footage of a 3d game with hard world edges
+            and mostly flat colors,
+          </p>
+          <ol>
+            <li>add <code>scm=1</code> to <code>-svtav1-params</code></li>
+            <li>
+              add <code>sharpness=2</code> and{' '}
+              <code>enable-restoration=0</code>{' '}
+              to <code>-svtav1-params</code>
+            </li>
+          </ol>
         </article>
       </div>
     </main>
