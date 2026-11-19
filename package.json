@@ -16,11 +16,11 @@
     "@astrojs/cloudflare": "^14.4.9",
     "@astrojs/svelte": "^9.1.6",
     "astro": "^7.4.13",
-    "libav.js": "github:Yahweasel/libav.js#v6.10.9.0",
+    "libav.js": "github:Yahweasel/libav.js#v6.11.9.0.2",
     "modern-normalize": "^3.0.1",
     "svelte": "^5.58.0",
     "typescript": "^6.0.3",
-    "wrangler": "^4.164.0"
+    "wrangler": "^4.165.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",

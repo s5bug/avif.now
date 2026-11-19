@@ -1,12 +1,13 @@
 allowBuilds:
   esbuild: true
   libav.js: true
+  libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/2baa971a01bdea4545c1c7e4d42855a33d5b8cc2(patch_hash=ff56347161e739c3cc70352bd2baf575fbb91f131bad69729f39f99586ac41e5): true
   libav.js@https://codeload.github.com/Yahweasel/libav.js/tar.gz/c80e885c3461f7bb7ea565c9631b34243ae0dbf1(patch_hash=fd9ef806de503d54da90fc487835e8c42f2c57052a02133c1800a3fbb3d08fec): true
   sharp: true
   workerd: true
-patchedDependencies:
-  libav.js@6.10.9: patches/libav.js@6.10.9.patch
 overrides:
   "@emnapi/core": "^1.11.3"
   "@emnapi/runtime": "^1.11.3"
   "@emnapi/wasi-threads": "^1.2.3"
+patchedDependencies:
+  libav.js@6.11.9: patches/libav.js@6.11.9.patch
