@@ -172,11 +172,12 @@ const encodeFrame = async (
   const copyOptions: VideoFrameCopyToOptions = { rect: visibleRect }
   const allocationSize = videoFrame.allocationSize(copyOptions)
   const rawBuffer = new Uint8Array(allocationSize)
-  await videoFrame.copyTo(rawBuffer, copyOptions)
+  const layout = await videoFrame.copyTo(rawBuffer, copyOptions)
   videoFrame.close()
 
   const frame: Frame = {
     data: rawBuffer,
+    layout,
     format: av.AV_PIX_FMT_YUV420P,
     width: exactWidth,
     height: exactHeight,
