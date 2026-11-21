@@ -18,9 +18,9 @@
     "astro": "^7.4.13",
     "libav.js": "github:Yahweasel/libav.js#v6.11.9.0.2",
     "modern-normalize": "^3.0.1",
-    "svelte": "^5.58.0",
+    "svelte": "^5.59.1",
     "typescript": "^6.0.3",
-    "wrangler": "^4.165.0"
+    "wrangler": "^4.166.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.12",
